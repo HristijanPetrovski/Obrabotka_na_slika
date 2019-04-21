@@ -39,14 +39,14 @@ def task1(gray_img):
             )
             title = [i.tolist() for i in compass()]
             axarr[j, i].set_title(f"{title[i*4+j]}")
-    plt.savefig("8_separete_filters.png", bbox_inches="tight")
+    plt.savefig("8_separete_filters.jpg", bbox_inches="tight")
     plt.show()
 
 
 def task2_1(gray_img):
     FILTER_LIST = [cv2.filter2D(gray_img, -1, fill) for fill in compass()]
     FINAL = np.max([c for c in FILTER_LIST], axis=0)
-    cv2.imwrite("final_result.png", FINAL)
+    cv2.imwrite("final_result.jpg", FINAL)
     cv2.imshow("Final result", FINAL)
     cv2.waitKey(0)
     cv2.destroyAllWindows()
@@ -65,7 +65,7 @@ def task2_2(gray_img):
         for j in range(3):
             axarr[j, i].imshow(cv2.cvtColor(RES[i*3 + j], cv2.COLOR_BGR2RGB))
             axarr[j, i].set_title(f"COMPASS FILTER VALUES: {i*3+j}")
-    plt.savefig("6_praga.png", bbox_inches="tight")
+    plt.savefig("6_praga.jpg", bbox_inches="tight")
     plt.show()
 
 
