@@ -1,0 +1,3 @@
+Izbran algoritam za segmentacija e adaptive gaussian thresholding.
+
+Rezultatot dobien so primena na istiot e zadovolitelen.
